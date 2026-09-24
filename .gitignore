@@ -24,7 +24,12 @@ Desktop.ini
 *.sublime-project
 *.sublime-workspace
 
-# Local temporary backups
+# Local temporary backups & scripts
 *.bak
 *~
 index_backup_old.html
+*.py
+pexels_*.json
+server.js
+dev-server.js
+
