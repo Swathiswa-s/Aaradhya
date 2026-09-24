@@ -1,0 +1,716 @@
+/**
+ * Aaradhya Clothing - Editorial Storytelling Sections & Magazine Spreads
+ */
+
+/* ==================================================
+   1. EDITORIAL QUOTES (Distributed)
+================================================== */
+.editorial-quote-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+}
+
+.editorial-quote-section::before {
+  content: '✦';
+  display: block;
+  font-size: 1.1rem;
+  color: var(--rosegold-primary);
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+.editorial-quote-text {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-primary);
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+  letter-spacing: 0.02em;
+}
+
+.editorial-quote-sub {
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rosegold-primary);
+  font-weight: 600;
+}
+
+/* ==================================================
+   2. COLLECTION INTRO: "Designed for Every Expression"
+================================================== */
+.collection-intro-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.category-quad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.category-pillar-card {
+  position: relative;
+  height: 460px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-med);
+}
+
+.category-pillar-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.category-pillar-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-pillar-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(35, 22, 28, 0.04) 0%,
+    rgba(35, 22, 28, 0.38) 50%,
+    rgba(35, 22, 28, 0.94) 100%
+  );
+  transition: background var(--transition-med);
+}
+
+.category-pillar-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.75rem 1.5rem;
+  z-index: 2;
+  transition: transform var(--transition-med);
+}
+
+.category-pillar-eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--rosegold-light);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.category-pillar-title {
+  font-size: 1.75rem;
+  font-family: var(--font-serif);
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-pillar-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.45;
+}
+
+.category-pillar-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(195, 125, 104, 0.3);
+  color: #ffffff;
+  font-size: 1rem;
+  transform: translateX(-6px);
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.category-pillar-card:hover {
+  border-color: var(--border-gold);
+  box-shadow: 0 16px 36px rgba(70, 45, 50, 0.18);
+  transform: translateY(-4px);
+}
+
+.category-pillar-card:hover .category-pillar-media img {
+  transform: scale(1.06);
+}
+
+.category-pillar-card:hover .category-pillar-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(35, 22, 28, 0) 0%,
+    rgba(35, 22, 28, 0.25) 40%,
+    rgba(35, 22, 28, 0.96) 100%
+  );
+}
+
+.category-pillar-card:hover .category-pillar-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==================================================
+   3. TAILORING & CRAFTSMANSHIP SPREAD
+   "Where Every Thread Begins"
+================================================== */
+.craftsmanship-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.craft-editorial-spread {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.craft-video-col {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-gold);
+}
+
+.craft-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-color: var(--bg-secondary);
+}
+
+.craft-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.craft-overlay-tag {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gold);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.craft-tag-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rosegold-primary);
+  box-shadow: 0 0 10px var(--rosegold-primary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.craft-tag-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.craft-text-col {
+  padding-right: 1rem;
+}
+
+.craft-quote-callout {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 1.85rem;
+  line-height: 1.35;
+  color: var(--rosegold-dark);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rosegold-primary);
+}
+
+.craft-paragraphs p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.craft-badges-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.craft-badge-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.craft-badge-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--rosegold-primary);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.craft-badge-lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ==================================================
+   4. SECOND BRAND STORY VIDEO SPREAD
+   "Made Slowly. Worn Beautifully."
+================================================== */
+.brand-story-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.story-spread-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.story-text-col {
+  padding-left: 0.5rem;
+}
+
+.story-video-col {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-gold);
+}
+
+.story-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: var(--bg-primary);
+}
+
+.story-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==================================================
+   5. THIRD STORY / STILL GALLERY SECTION
+   "Elegance lives in the details."
+================================================== */
+.details-story-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-primary);
+}
+
+.details-triptych-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.25rem;
+}
+
+.detail-triptych-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-med);
+}
+
+.detail-triptych-item:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.detail-triptych-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.detail-triptych-item:hover .detail-triptych-img {
+  transform: scale(1.05);
+}
+
+.detail-triptych-caption {
+  padding: 1.25rem;
+  background: var(--bg-card);
+}
+
+.detail-triptych-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.detail-triptych-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ==================================================
+   6. ABOUT THE BRAND: "THE STORY OF AARADHYA"
+================================================== */
+.about-brand-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.about-brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-brand-image-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-canvas {
+  width: 100%;
+  height: 480px;
+  display: block;
+}
+
+.about-brand-floating-card {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-gold);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  max-width: 260px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-brand-floating-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--rosegold-dark);
+  margin-bottom: 0.25rem;
+}
+
+.about-brand-floating-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.about-stat-card {
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-stat-val {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--rosegold-primary);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.about-stat-lbl {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ==================================================
+   7. CONTACT SECTION (Editorial Concierge)
+================================================== */
+.contact-section {
+  padding: 4.5rem 0;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contact-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  margin-top: 2.5rem;
+}
+
+.contact-concierge-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-block h4 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rosegold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-block p,
+.contact-info-block a {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.contact-info-block a:hover {
+  color: var(--rosegold-primary);
+}
+
+.contact-atelier-note {
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--rosegold-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-atelier-note p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.contact-form-card {
+  background: var(--bg-card);
+  padding: 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+  outline: none;
+  border-color: var(--rosegold-primary);
+  box-shadow: 0 0 15px rgba(195, 125, 104, 0.18);
+}
+
+.contact-form-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ==================================================
+   8. LUXURY FOOTER
+================================================== */
+.site-footer {
+  background-color: #271a20;
+  border-top: 1px solid rgba(195, 125, 104, 0.2);
+  padding: 4.5rem 0 2.5rem 0;
+  position: relative;
+  color: #f7f2ea;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr) 1.4fr;
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand-title {
+  font-size: 1.8rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.footer-brand-desc {
+  font-size: 0.85rem;
+  color: #bfaab2;
+  line-height: 1.7;
+  max-width: 300px;
+}
+
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rosegold-light);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  font-size: 0.85rem;
+  color: #c9b8be;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--rosegold-light);
+}
+
+.newsletter-form-box {
+  display: flex;
+  margin-top: 1.25rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: none;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--rosegold-light);
+}
+
+.newsletter-btn {
+  padding: 0.8rem 1.4rem;
+  background: var(--gold-gradient);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: opacity var(--transition-fast);
+}
+
+.newsletter-btn:hover {
+  opacity: 0.92;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  font-size: 0.75rem;
+  color: #9d878f;
+}
+
+.footer-replay-btn {
+  color: var(--rosegold-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.footer-replay-btn:hover {
+  background: rgba(195, 125, 104, 0.2);
+}

@@ -1,0 +1,277 @@
+/**
+ * Aaradhya Clothing - Comprehensive Responsive System
+ * Desktop, Laptop, Tablet, and Mobile Touch Optimizations.
+ */
+
+/* ==================================================
+   1. LAPTOPS & SMALL DESKTOPS (<= 1200px)
+================================================== */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .craft-editorial-spread,
+  .story-spread-grid,
+  .about-brand-grid,
+  .contact-editorial-grid {
+    gap: 3rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+  }
+
+  .footer-newsletter-col {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    max-width: 500px;
+  }
+}
+
+/* ==================================================
+   2. TABLETS & VERTICAL SCREENS (<= 992px)
+================================================== */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .category-quad-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-pillar-card {
+    height: 440px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1.25rem;
+  }
+
+  .craft-editorial-spread {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .craft-canvas-wrapper {
+    height: 520px;
+  }
+
+  .story-spread-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-spread-grid .story-video-col {
+    order: -1;
+  }
+
+  .story-canvas-wrapper {
+    height: 500px;
+  }
+
+  .details-triptych-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-triptych-img {
+    height: 320px;
+  }
+
+  .about-brand-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-brand-image-wrap img {
+    height: 480px;
+  }
+
+  .contact-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .pv-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .checkout-form-view {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+
+  .search-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+   3. MOBILE PHONES (<= 768px)
+================================================== */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .container,
+  .container-narrow {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Hero: full-screen stays, but reposition focal for portrait crops */
+  .hero-section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-badges-bar {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .reveal-controls {
+    padding: 0 1.5rem;
+    bottom: 2rem;
+  }
+
+  .reveal-progress-track {
+    width: 120px;
+  }
+
+  .reveal-brand-title {
+    font-size: 2.6rem;
+  }
+
+  .editorial-quote-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .editorial-quote-text {
+    font-size: 1.85rem;
+  }
+
+  .collection-intro-section,
+  .craftsmanship-section,
+  .brand-story-section,
+  .details-story-section,
+  .about-brand-section,
+  .products-section,
+  .contact-section {
+    padding: 3.5rem 0;
+  }
+
+  .category-quad-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .category-pillar-card {
+    height: 380px;
+  }
+
+  .cart-drawer,
+  .wishlist-drawer {
+    max-width: 100%;
+  }
+
+  .checkout-modal {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none !important;
+  }
+
+  .checkout-close-btn {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .checkout-form-view {
+    padding: 3rem 1.25rem 2rem 1.25rem;
+  }
+
+  .checkout-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-modal {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none !important;
+  }
+
+  .product-modal-content {
+    padding: 3rem 1.25rem 2rem 1.25rem;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .contact-form-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ==================================================
+   4. ULTRA-COMPACT MOBILE (<= 480px)
+================================================== */
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .product-card-media {
+    aspect-ratio: 4 / 5;
+  }
+
+  .craft-badges-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
